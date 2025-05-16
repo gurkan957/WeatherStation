@@ -71,7 +71,3 @@ using System.Windows.Forms;
 1. Projeyi Visual Studio ile açın.
 2. Seri port ayarlarını doğru şekilde yapılandırın.
 3. Uygulamayı başlatın ve gelen verileri görüntüleyin.
-
-## Lisans
-
-Bu proje MIT Lisansı ile yayınlanmıştır.
