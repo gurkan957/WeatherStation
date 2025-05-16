@@ -1,83 +1,77 @@
-🌡️ Arduino Nano | BMP180 & DHT11 Sensörleri ile Sıcaklık, Nem ve Basınç Takip Sistemi
-Bu proje, Arduino Nano kullanarak BMP180 (basınç & sıcaklık) ve DHT11 (nem & sıcaklık) sensörlerinden alınan verileri C# Windows Forms (Visual Studio) uygulamasıyla bilgisayarda canlı olarak görselleştiren bir sistemdir. Veriler hem gauge göstergeler hem de grafikler ile ekrana yansıtılır.
 
-📦 Kullanılan Malzemeler
-Bileşen	Açıklama
-Arduino Nano	Mikrodenetleyici kartı
-BMP180 Sensörü	Basınç ve sıcaklık ölçer
-DHT11 Sensörü	Nem ve sıcaklık ölçer
-10kΩ Direnç	DHT11 için pull-up direnci
-Breadboard & Jumper Kabloları	Bağlantılar için
+# 🌡️ Arduino Nano ile BMP180 & DHT11 Sensörlerinden Sıcaklık, Nem ve Basınç Ölçümü
 
-🖥️ Visual Studio Uygulaması
-C# Windows Forms ile arayüz geliştirildi.
+## Proje Açıklaması
 
-System.IO.Ports kütüphanesi ile Arduino’dan veri alındı.
+Bu projede, Arduino Nano kullanılarak BMP180 (basınç ve sıcaklık sensörü) ve DHT11 (nem ve sıcaklık sensörü) ile ölçülen veriler, Visual Studio'da geliştirilen C# Windows Forms uygulaması ile bilgisayar ortamında görselleştirilmektedir. Ölçülen veriler, hem gauge göstergelerle hem de grafikler ile gerçek zamanlı olarak gösterilir.
 
-Veriler gauge göstergeler ve canlı grafik olarak gösterildi.
+## Kullanılan Malzemeler
 
-Kullanılan Kütüphaneler:
-csharp
-Kopyala
-Düzenle
+| Bileşen           | Açıklama                        |
+|-------------------|---------------------------------|
+| Arduino Nano      | Mikrodenetleyici kartı          |
+| BMP180 Sensörü    | Basınç ve sıcaklık ölçümü       |
+| DHT11 Sensörü     | Nem ve sıcaklık ölçümü          |
+| 10kΩ Direnç       | DHT11 için pull-up direnci      |
+| Breadboard        | Devre kurulumu için             |
+| Jumper Kabloları  | Bağlantı kabloları              |
+
+## Visual Studio Uygulaması
+
+Bu projede Visual Studio ile C# Windows Forms arayüzü oluşturulmuştur. Seri port üzerinden gelen veriler, uygulamada gauge göstergeler ve grafiklerle görselleştirilmektedir.
+
+### Kullanılan Kütüphaneler
+```csharp
 using System;
 using System.IO.Ports;
 using System.Windows.Forms;
-🔌 Devre Bağlantıları
-DHT11 Bağlantısı:
-Arduino Nano	DHT11
-D2	Data
-5V	VCC
-GND	GND
+```
 
-Not: DHT11 Data ile 5V arasına 10kΩ pull-up direnci bağlı olmalıdır.
+## Arduino Nano Bağlantıları
 
-BMP180 Bağlantısı:
-Arduino Nano	BMP180
-3.3V	VIN
-GND	GND
-A4	SDA
-A5	SCL
+### DHT11 Bağlantıları
+| Arduino Nano Pin | DHT11 Pin  |
+|------------------|------------|
+| D2               | Data       |
+| 5V               | VCC        |
+| GND              | GND        |
 
-Not: BMP180 sensörünü 3.3V'a bağlamalısın. 5V bağlantısı cihaza zarar verebilir.
+> Not: DHT11 sensörünün Data pinine **10kΩ pull-up direnci** bağlanmalıdır.
 
-🚀 Projenin Çalışma Prensibi
-Arduino Nano, BMP180 ve DHT11 sensörlerinden veri toplar.
+### BMP180 Bağlantıları
+| Arduino Nano Pin | BMP180 Pin |
+|------------------|------------|
+| 3.3V             | VIN        |
+| GND              | GND        |
+| A4               | SDA        |
+| A5               | SCL        |
 
-Bu verileri seri port üzerinden bilgisayara yollar.
+> Not: BMP180 sensörü 3.3V ile çalışmalıdır. 5V'a bağlanması önerilmez.
 
-C# Windows Forms uygulaması seri porttan gelen verileri okur.
+## Projenin Çalışma Mantığı
 
-Sıcaklık, nem ve basınç değerleri arayüzde gauge göstergeler ve grafiklerle gösterilir.
+1. Arduino Nano, BMP180 ve DHT11 sensörlerinden sıcaklık, nem ve basınç verilerini toplar.
+2. Toplanan veriler seri port üzerinden bilgisayara aktarılır.
+3. Visual Studio'da geliştirilen C# arayüz bu verileri okur.
+4. Veriler gauge göstergeler ile görsel olarak gösterilirken aynı zamanda grafik üzerinde de anlık olarak çizdirilir.
 
-🛠️ Kurulum & Çalıştırma
-Arduino Tarafı:
-Arduino IDE ile ilgili .ino dosyasını yükle.
+## Projenin Kullanım Alanları
 
-Arduino Nano'yu bilgisayara bağla.
+- Basit hava durumu istasyonları
+- İç ortam hava kalitesi ölçümü
+- Sensör verilerinin görselleştirilmesi ve takibi
 
-Visual Studio Tarafı:
-Visual Studio ile projeyi aç.
+## Nasıl Kullanılır?
 
-Doğru COM Portu seçtiğinden emin ol.
+### Arduino Tarafı
+1. Arduino IDE ile projedeki .ino dosyasını yükleyin.
+2. Arduino Nano'yu bilgisayara bağlayın.
 
-Uygulamayı başlat.
+### Visual Studio Tarafı
+1. Projeyi Visual Studio ile açın.
+2. Seri port ayarlarını doğru şekilde yapılandırın.
+3. Uygulamayı başlatın ve gelen verileri görüntüleyin.
 
-📈 Uygulama Alanları
-Hava durumu istasyonları
+## Lisans
 
-İç ortam hava kalitesi izleme
-
-Sensör verilerinin görsel sunumu
-
-📄 Lisans
-Bu proje MIT Lisansı ile paylaşılmıştır.
-
-⭐ Katkıda Bulunmak İstersen:
-Bu repoyu fork'la,
-
-Geliştirmeler yap,
-
-Pull request gönder,
-
-⭐ beğenip desteğini göster!
+Bu proje MIT Lisansı ile yayınlanmıştır.
