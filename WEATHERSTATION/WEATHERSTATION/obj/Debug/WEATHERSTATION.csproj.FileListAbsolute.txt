@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.PROJECT.resources
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.Properties.Resources.resources
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\bin\Debug\WEATHERSTATION.exe.config
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\bin\Debug\WEATHERSTATION.exe
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\bin\Debug\WEATHERSTATION.pdb
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\bin\Debug\AGauge.dll
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERS.5416459B.Up2Date
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.exe
+C:\Users\Administrator\source\repos\WEATHERSTATION\WEATHERSTATION\obj\Debug\WEATHERSTATION.pdb
